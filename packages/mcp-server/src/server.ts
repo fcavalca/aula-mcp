@@ -249,6 +249,7 @@ if (INGRESS_PORT_RAW) {
     // all interfaces — the addon container's network namespace already isolates
     // the port from the LAN unless config.yaml exposes it via `ports:`.
     hostname: '0.0.0.0',
+    idleTimeout: 240,
     fetch: setupApp.fetch,
   });
   logger.info('aula-mcp.setup_ui.listening', { port: ingressPort });
